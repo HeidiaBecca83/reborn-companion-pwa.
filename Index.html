@@ -36,10 +36,10 @@
         splash.classList.add('hide');
         log("Mounted successfully ✅");
       } catch (e) {
-        log("E
-
-      document.getElementById('splash')?.classList.add('hide');
-    });
+        log("Error: " + e.message);
+        splash.innerHTML = "<div style='text-align:center'><h2>⚠️ Could not load the app.</h2><p>" + e.message + "</p></div>";
+      }
+    })();
   </script>
 </body>
 </html>
